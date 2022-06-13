@@ -40,9 +40,14 @@ INSTALLED_APPS = [
     # 3rd party apps
     "crispy_forms",
     "crispy_bootstrap5",
+    "webauthn",
     # local apps
     "pages.apps.PagesConfig",
+    "accounts.apps.AccountsConfig",
 ]
+
+# default auth model
+AUTH_USER_MODEL = "accounts.CustomUser"
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -78,10 +83,15 @@ WSGI_APPLICATION = 'bloc_project.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
+# do I need to change the user and password below???
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'postgres',
+        'USER': 'postgres',
+        'PASSWORD': 'postgres',
+        'HOST': 'db',
+        'PORT': 5432,
     }
 }
 
