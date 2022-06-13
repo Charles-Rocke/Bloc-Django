@@ -7,7 +7,6 @@ class HomePageView(TemplateView):
     model = "User"
     template_name = "pages/home.html"
     
-class SignupPageView(TemplateView):
-    template_name = "pages/signup.html"
+
     
     
