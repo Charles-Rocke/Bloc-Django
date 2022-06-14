@@ -30,15 +30,16 @@ class CustomUserAdmin(UserAdmin):
             'fields': ('last_login', 'date_joined')
         }),
         ('Additional info', {
-            'fields': ('first_name', 'last_name', 'email', 'company',)
+            'fields': ('first_name', 'last_name', 'email', 'company', 'username',)
         })
     )
     
     # extra fields
     add_fieldsets = (
         ('Additional info', {
-            'fields': ('first_name', 'last_name', 'email', 'company',)
+            'fields': ('first_name', 'last_name', 'email', 'company', 'username',)
         }),
     )
+    ordering = ('email',)
     
 admin.site.register(CustomUser, CustomUserAdmin)
