@@ -146,3 +146,5 @@ CRISPY_TEMPLATE_PACK = "bootstrap5"
 # CHANGE TO PORTAL WHEN PORTAL IS COMPLETE
 LOGIN_REDIRECT_URL = "home"
 LOGOUT_REDIRECT_URL = "home"
+
+EMAIL_BACKENDS = "django.core.mail.backends.console.EmailBackend"
