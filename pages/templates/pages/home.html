@@ -332,8 +332,10 @@
         <!-- To make this form functional, sign up at-->
         <!-- https://startbootstrap.com/solution/contact-forms-->
         <!-- to get an API token!-->
-        <form method = "POST" id="contactForm" data-sb-form-api-token="API_TOKEN">{% csrf_token %}
-          <!-- Name input-->
+        <form method = "POST" id="contactForm" data-sb-form-api-token="API_TOKEN">
+          {% csrf_token %}
+          {{ form.as_p }}
+          <!-- Name input--
           <div class="form-floating mb-3">
             <input
               class="form-control"
@@ -347,7 +349,7 @@
               A name is required.
             </div>
           </div>
-          <!-- Email address input-->
+          <!-- Email address input--
           <div class="form-floating mb-3">
             <input
               class="form-control"
@@ -364,7 +366,7 @@
               Email is not valid.
             </div>
           </div>
-          <!-- Company name input-->
+          <!-- Company name input--
           <div class="form-floating mb-3">
             <input
               class="form-control"
@@ -399,12 +401,8 @@
           <!-- has successfully submitted-->
           <div class="d-none" id="submitSuccessMessage">
             <div class="text-center mb-3">
-              <div class="fw-bolder">Form submission successful!</div>
-              To activate this form, sign up at
-              <br />
-              <a href="https://startbootstrap.com/solution/contact-forms"
-                >https://startbootstrap.com/solution/contact-forms</a
-              >
+              <div class="fw-bolder">Sign up successful!</div>
+              Thanks for siging up! We will reach out to you within the hour!
             </div>
           </div>
           <!-- Submit error message-->
@@ -423,7 +421,7 @@
               id="submitButton"
               type="submit"
             >
-              Submit
+              Sign up
             </button>
           </div>
         </form>
