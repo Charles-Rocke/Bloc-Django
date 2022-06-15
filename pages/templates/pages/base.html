@@ -54,7 +54,7 @@
                     {% if user.is_authenticated %}
                     <ul class="navbar-nav ms-auto me-4 my-3 my-lg-0">
                         <li class="nav-item"><a class="nav-link me-lg-3" href="#Authenticated">thanks for signing up, {{ user.email }}</a></li>
-                        <a href = "{% url 'logout' %}">logout</a>
+                        <a href = "{% url 'account_logout' %}">logout</a>
                     </ul>
                     {% else %}
                     <ul class="navbar-nav ms-auto me-4 my-3 my-lg-0">

@@ -1,19 +1,27 @@
+from allauth.account.forms import SignupForm
 from django import forms
 from django.contrib.auth import get_user_model
 from django.contrib.auth.forms import UserChangeForm
 
 # forms here
-
 # Custom user form
-class CustomUserCreationForm(forms.Form):
-    class Media:
-        css = {
-            'all': ('css/main.css',),
-        }
-    email = forms.EmailField(widget=forms.EmailInput(attrs={'class': 'input100', 'placeholder': 'Enter email'}))
+class CustomUserCreationForm(SignupForm):
+    
     first_name = forms.CharField(max_length = 25)
     last_name = forms.CharField(max_length = 25)
     company = forms.CharField(max_length = 100)
+    
+    def __init__(self, *args, **kwargs):
+        super(CustomUserCreationForm, self).__init__(*args, **kwargs)
+        self.fields.pop('password1')
+    
+    def save(self, request):
+        user = super(CustomUserCreationForm, self).save(request)
+        user.first_name = self.cleaned_data['first_name']
+        user.last_name = self.cleaned_data['last_name']
+        user.company = self.cleaned_data['company']
+        user.save()
+        return user
     
     class Meta:
         model = get_user_model()
