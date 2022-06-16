@@ -19,7 +19,7 @@ from .settings import DEBUG
 
 urlpatterns = [
     # Django Admin
-    path('admin/', admin.site.urls),
+    path('9Mhs644FT8vtiwUNK39fB3tn46/', admin.site.urls),
     # User Management
     path("accounts/", include("allauth.urls")),
     # Local Apps
