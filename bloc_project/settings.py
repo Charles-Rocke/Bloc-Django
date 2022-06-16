@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     "webauthn",
     "allauth",
     "allauth.account",
+    "debug_toolbar",
     # local apps
     "pages.apps.PagesConfig",
     "accounts.apps.AccountsConfig",
@@ -63,6 +64,7 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    "debug_toolbar.middleware.DebugToolbarMiddleware",
 ]
 
 ROOT_URLCONF = "bloc_project.urls"
@@ -161,3 +163,10 @@ ACCOUNT_UNIQUE_EMAIL = True
 ACCOUNT_FORMS = {
     'signup': 'accounts.forms.CustomUserCreationForm',
 }
+
+# django-debug-toolbar
+import socket
+
+# make sure Internal IPS mathces that of the Docker host
+hostname, _, ips= socket.gethostbyname_ex(socket.gethostname())
+INTERNAL_IPS = [ip[:-1] + "1" for ip in ips]

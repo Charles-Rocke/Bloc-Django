@@ -15,7 +15,6 @@ class HomePageTests(SimpleTestCase):
         
     # test if correct template is used
     def test_homepage_template(self):
-        self.assertTemplateUsed(self.response, "pages/base.html")
         self.assertTemplateUsed(self.response, "pages/home.html")
         
     # test template has correct html code
