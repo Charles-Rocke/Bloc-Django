@@ -7,9 +7,9 @@ from django.contrib.auth.forms import UserChangeForm
 # Custom user form
 class CustomUserCreationForm(SignupForm):
     
-    first_name = forms.CharField(max_length = 25)
-    last_name = forms.CharField(max_length = 25)
-    company = forms.CharField(max_length = 100)
+    first_name = forms.CharField(max_length = 25, widget=forms.TextInput(attrs={'placeholder': 'First name'}))
+    last_name = forms.CharField(max_length = 25, widget=forms.TextInput(attrs={'placeholder': 'Last name'}))
+    company = forms.CharField(max_length = 100, widget=forms.TextInput(attrs={'placeholder': 'Company name'}))
     
     def __init__(self, *args, **kwargs):
         super(CustomUserCreationForm, self).__init__(*args, **kwargs)

@@ -11426,7 +11426,7 @@ section {
 
 .device[data-device=iPhoneX][data-orientation=portrait][data-color=black]::after {
   content: "";
-  background-image: url("/static/images/portrait_black.png");
+  background-image: url("/static/images/portrait_black.a3f4e3fd390d.png");
 }
 
 .device[data-device=iPhoneX][data-orientation=portrait][data-color=black] .button {
@@ -11471,7 +11471,7 @@ section.cta:before {
 .features-device-mockup .circle {
   position: absolute;
   left: 0;
-  fill: url(#circleGradient);
+  fill: url("#circleGradient");
   width: 70%;
   display: none;
 }
@@ -11583,7 +11583,7 @@ footer a:hover, footer a:active, footer a:focus {
 }
 .masthead .masthead-device-mockup .circle {
   position: absolute;
-  fill: url(#circleGradient);
+  fill: url("#circleGradient");
   width: 70%;
   display: none;
 }

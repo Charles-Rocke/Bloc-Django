@@ -147,7 +147,9 @@ CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 CRISPY_TEMPLATE_PACK = "bootstrap5"
 
 # CHANGE TO PORTAL WHEN PORTAL IS COMPLETE
-LOGIN_REDIRECT_URL = "home"
+ACCOUNT_SIGNUP_REDIRECT_URL = "signupsuccess" # used for sign up for landing page use
+# ACCOUNT_EMAIL_CONFIRMATION_AUTHENTICATED_REDIRECT_URL = "signupsuccess"
+# LOGIN_REDIRECT_URL = "home"
 LOGOUT_REDIRECT_URL = "home"
 
 # django-allauth config
@@ -156,7 +158,8 @@ AUTHENTICATION_BACKENDS = (
     "django.contrib.auth.backends.ModelBackend",
     "allauth.account.auth_backends.AuthenticationBackend",
 )
-EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+# production EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 DEFAULT_FROM_EMAIL = "charles@bloc.id"
 ACCOUNT_SIGNUP_PASSWORD_ENTER_TWICE = False
 ACCOUNT_USERNAME_REQUIRED = False
@@ -166,6 +169,8 @@ ACCOUNT_UNIQUE_EMAIL = True
 ACCOUNT_FORMS = {
     'signup': 'accounts.forms.CustomUserCreationForm',
 }
+#   Logout immediatly
+ACCOUNT_LOGOUT_ON_GET = True
 
 # django-debug-toolbar
 import socket

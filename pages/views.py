@@ -6,6 +6,11 @@ from django.views.generic import TemplateView
 class HomePageView(TemplateView):
     template_name = "pages/home.html"
     
+    
+# signup success page
+class SignupSuccessPageView(TemplateView):
+    template_name = "pages/signupsuccess.html"
+    
 
     
     

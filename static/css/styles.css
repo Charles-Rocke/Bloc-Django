@@ -29,6 +29,7 @@
 }
 /* end footer placement */
 
+/* bloc CSS */
  .black-btn{
    color: black;
  }
@@ -41,6 +42,12 @@
   background-color: #000;
   border-color: #000;
 }
+/* bloc primary button */
+.bloc-btn{
+  color: #FFFFFF;
+  background-color: #05C1FF; 
+}
+/* end bloc CSS */
 
 :root {
   --bs-blue: #2937f0;
@@ -3063,8 +3070,8 @@ textarea.form-control-lg {
 
 .btn-primary {
   color: #fff;
-  background-color: #2937f0;
-  border-color: #2937f0;
+  background-color: #05C1FF;
+  border-color: #05C1FF;
 }
 .btn-primary:hover {
   color: #fff;
@@ -11328,7 +11335,7 @@ html {
 }
 
 .bg-gradient-primary-to-secondary {
-  background: linear-gradient(45deg, #2937f0, #9f1ae2) !important;
+  background: linear-gradient(45deg, #05C1FF, #b721ff) !important;
 }
 
 .font-alt {
@@ -11336,7 +11343,7 @@ html {
 }
 
 .text-gradient {
-  background: -webkit-linear-gradient(#2937f0, #9f1ae2);
+  background: -webkit-linear-gradient(#05C1FF, #b721ff);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -11476,10 +11483,10 @@ section.cta:before {
   display: none;
 }
 .features-device-mockup .circle .gradient-start-color {
-  stop-color: #2937f0;
+  stop-color: #05C1FF;
 }
 .features-device-mockup .circle .gradient-end-color {
-  stop-color: #9f1ae2;
+  stop-color: #b721ff;
 }
 .features-device-mockup .shape-1 {
   position: absolute;
@@ -11588,10 +11595,10 @@ footer a:hover, footer a:active, footer a:focus {
   display: none;
 }
 .masthead .masthead-device-mockup .circle .gradient-start-color {
-  stop-color: #2937f0;
+  stop-color: #05C1FF;
 }
 .masthead .masthead-device-mockup .circle .gradient-end-color {
-  stop-color: #9f1ae2;
+  stop-color: #b721ff;
 }
 .masthead .masthead-device-mockup .shape-1 {
   position: absolute;

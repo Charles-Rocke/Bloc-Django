@@ -2,9 +2,6 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: monospace;
-}
 
 img {
   width: auto;
@@ -54,3 +51,4 @@ p {
 a:hover{
 	color: white;
 }
+
