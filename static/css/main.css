@@ -35,7 +35,7 @@ end font */
 
 * {
 	margin: 0px; 
-	padding: 0px; 
+	padding: 0px;
 	box-sizing: border-box;
 }
 
@@ -51,7 +51,7 @@ a {
   
 	font-size: 14px;
 	line-height: 1.7;
-	color: #666666;
+	color: black;
 	margin: 0px;
 	transition: all 0.4s;
 	-webkit-transition: all 0.4s;
@@ -65,7 +65,7 @@ a:focus {
 
 a:hover {
 	text-decoration: none;
-  color: #6a7dfe;
+  color: #b721ff;
   color: -webkit-linear-gradient(left, #05C1FF, #b721ff);
   color: -o-linear-gradient(left, #05C1FF, #b721ff);
   color: -moz-linear-gradient(left, #05C1FF, #b721ff);
@@ -397,17 +397,10 @@ iframe {
 
 .login100-form-btn {
   font-family: 'Exo 2', sans-serif;
-  
   font-size: 15px;
   color: #fff;
   line-height: 1.2;
   text-transform: lowercase;
-
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
   justify-content: center;
   align-items: center;
   padding: 0 20px;

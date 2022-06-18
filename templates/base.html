@@ -61,12 +61,16 @@
                         <li class="nav-item"><a class="nav-link me-lg-3" href="#features">features</a></li>
                     </ul>
                     <form action="{% url 'account_signup' %}">
-                        <button class="bloc-btn btn btn-primary rounded-pill px-3 mb-2 mb-lg-0">
-                            <span class="d-flex align-items-center">
-                                <i class="bi-chat-text-fill me-2"></i>
-                                <span class="small">sign up</span>
-                            </span>
-                        </button>
+                        <div class="wrap-login100-form-btn">
+                            <div class="login100-form-bgbtn"></div>
+                            <button class="login100-form-btn mx-5">
+                                <center>
+                                    <span class="d-flex align-items-center">
+                                        <span>sign up</span>
+                                    </span>
+                                </center>
+                            </button>
+                        </div>
                     </form>
                     {% endif %}
                 </div>
@@ -74,14 +78,12 @@
         </nav>
         
         <!-- Main content-->
-        <section>
-            <main>
-            {% block content %}
-            {% endblock content %}
-            </main>
-        </section>
+        <main>
+        {% block content %}
+        {% endblock content %}
+        </main>
         <!-- Footer-->
-        <footer class="sticky-bottom bg-black text-center py-5">
+        <footer class="bg-black text-center py-5">
             <div class="container px-5">
                 <div class="text-white-50 small">
                     <div class="mb-2">&copy; Bloc Labs Inc. 2022. All Rights Reserved.</div>
@@ -102,7 +104,7 @@
         <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
-        <!-- AUTH CSS -->
+        <!-- AUTH JS -->
         <!--===============================================================================================-->
         <script src="static/vendor/jquery/jquery-3.2.1.min.js"></script>
         <!--===============================================================================================-->
