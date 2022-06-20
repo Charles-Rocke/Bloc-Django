@@ -32,6 +32,9 @@ end font */
 
 /*//////////////////////////////////////////////////////////////////
 [ RESTYLE TAG ]*/
+.signup-form{
+  font-family: 'Exo 2', sans-serif;
+}
 
 * {
 	margin: 0px; 
