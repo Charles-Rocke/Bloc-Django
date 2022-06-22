@@ -95,9 +95,8 @@ WSGI_APPLICATION = "bloc_project.wsgi.application"
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
 # do I need to change the user and password below???
-DATABASES = {
-    "default": env.dj_db_url("DATABASE_URL", default="postgres://postgres@db/postgres")
-}
+
+DATABASES['default'] = env.dj_db_url.config(default='DATABASE_URL')
 
 
 # Password validation
@@ -159,7 +158,7 @@ AUTHENTICATION_BACKENDS = (
     "allauth.account.auth_backends.AuthenticationBackend",
 )
 # production EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
-EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 DEFAULT_FROM_EMAIL = "charles@bloc.id"
 ACCOUNT_SIGNUP_PASSWORD_ENTER_TWICE = False
 ACCOUNT_USERNAME_REQUIRED = False
