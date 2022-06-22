@@ -15,5 +15,3 @@ RUN pip install -r requirements.txt
 
 # copy project
 COPY . .
-
-CMD gunicorn bloc_project.wsgi:application --bind 0.0.0.0:$PORT
