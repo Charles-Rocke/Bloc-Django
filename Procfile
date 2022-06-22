@@ -1,0 +1,1 @@
+web: gunicorn bloc_project.wsgi
