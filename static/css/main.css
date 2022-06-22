@@ -32,6 +32,10 @@ end font */
 
 /*//////////////////////////////////////////////////////////////////
 [ RESTYLE TAG ]*/
+/* cross-platform-img z-index */
+.cross-platform-img{
+  z-index: 100;
+}
 /* mp4 style */
 .device-wrapper { position: relative; }
 .device-wrapper > video {
