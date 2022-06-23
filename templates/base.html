@@ -38,7 +38,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,300;0,500;0,600;0,700;1,300;1,500;1,600;1,700&amp;display=swap" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,400;1,400&amp;display=swap" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
-        <link rel="stylesheet" href="{% static '/css/styles.css' %}" />
+        <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
         <title>{% block title %}Bloc{% endblock title %}</title>
     </head>
     <body id="page-top">
@@ -53,12 +53,6 @@
                     <i class="bi-list"></i>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
-                    {% if user.is_authenticated %}
-                    <ul class="navbar-nav ms-auto me-4 my-3 my-lg-0">
-                        <li class="nav-item"><a class="nav-link me-lg-3" href="#Authenticated">thanks for signing up, {{ user.email }}</a></li>
-                        <a href = "{% url 'account_logout' %}">logout</a>
-                    </ul>
-                    {% else %}
                     <ul class="navbar-nav ms-auto me-4 my-3 my-lg-0">
                         <li class="nav-item"><a class="nav-link me-lg-3" href="#features">features</a></li>
                     </ul>
@@ -74,7 +68,6 @@
                             </button>
                         </div>
                     </form>
-                    {% endif %}
                 </div>
             </div>
         </nav>

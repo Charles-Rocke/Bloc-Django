@@ -1,6 +1,7 @@
 from django.test import SimpleTestCase
 from django.urls import reverse, resolve
 from .views import HomePageView
+from django.http import HttpResponsePermanentRedirect
 
 # Create your tests here.
 class HomePageTests(SimpleTestCase):
@@ -8,19 +9,20 @@ class HomePageTests(SimpleTestCase):
     def setUp(self):
         url = reverse("home")
         self.response = self.client.get(url)
-        
+    
+    
+    
     # test that url exists at correct location
     def test_url_exists_at_correct_location(self):
         self.assertEqual(self.response.status_code, 200)
         
     # test if correct template is used
     def test_homepage_template(self):
-        self.assertTemplateUsed(self.response, "pages/home.html")
+        self.assertTemplateUsed(self.response, "home.html")
         
     # test template has correct html code
     def test_homepage_contains_correct_html(self):
-        self.assertContains(self.response, "Passwordless.")
-        self.assertContains(self.response, "Period.")
+        self.assertContains(self.response, "passwordless.")
         
     # test home page does not have incorrect code
     def test_homepage_contains_incorrect_html(self):
