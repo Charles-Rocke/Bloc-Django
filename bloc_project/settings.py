@@ -160,7 +160,7 @@ AUTHENTICATION_BACKENDS = (
     "allauth.account.auth_backends.AuthenticationBackend",
 )
 # production EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
-
+EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 
 # end email
 ACCOUNT_SIGNUP_PASSWORD_ENTER_TWICE = False
