@@ -28,7 +28,7 @@ SECRET_KEY = env("DJANGO_SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env.bool("DJANGO_DEBUG", default=False)
 
-ALLOWED_HOSTS = ["damp-reef-21243.herokuapp.com", "localhost", "127.0.0.1", "bloc.id", "*"]
+ALLOWED_HOSTS = ["bloc-site.herokuapp.com","damp-reef-21243.herokuapp.com", "localhost", "127.0.0.1", "bloc.id", "*"]
 
 
 # Application definition
@@ -162,13 +162,6 @@ AUTHENTICATION_BACKENDS = (
 # production EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 DEFAULT_FROM_EMAIL = "charlesgamble@bloc.id"
-EMAIL_HOST = "smtp.sendgrid.net"
-EMAIL_HOST_USER = env("EMAIL_HOST_USER")
-EMAIL_HOST_PASSWORD = env("EMAIL_HOST_PASSWORD")
-EMAIL_PORT = env.int("EMAIL_PORT", default=587)
-EMAIL_USE_TLS = True
-# end email
-
 ACCOUNT_SIGNUP_PASSWORD_ENTER_TWICE = False
 ACCOUNT_USERNAME_REQUIRED = False
 ACCOUNT_AUTHENTICATION_METHOD = "email"
