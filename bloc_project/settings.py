@@ -149,7 +149,7 @@ CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 CRISPY_TEMPLATE_PACK = "bootstrap5"
 
 # CHANGE TO PORTAL WHEN PORTAL IS COMPLETE
-ACCOUNT_SIGNUP_REDIRECT_URL = "portal_home" # used for sign up for landing page use
+ACCOUNT_SIGNUP_REDIRECT_URL = "signupsuccess" # used for sign up for landing page use
 # ACCOUNT_EMAIL_CONFIRMATION_AUTHENTICATED_REDIRECT_URL = "signupsuccess"
 # LOGIN_REDIRECT_URL = "home"
 # LOGOUT_REDIRECT_URL = "home"
