@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block head_title %}{% trans "portal | home" %}{% endblock %}
+{% block content %}
+
+<center><img src="/static/images/birds.svg" alt="bloc" width="95" height="84" class="logo d-inline-block align-text-top"></center>
+<span class="login100-form-title pb-3 signup-success-span">
+portal home
+</span>
+<center>
+    <strong>
+        <small>This is the portal home page</small>
+    </strong>
+</center>
+<br>
+<div class="container-login100-form-btn">
+    <div class="wrap-login100-form-btn">
+        <div class="login100-form-bgbtn"></div>
+        <button class="login100-form-btn" type = "submit">
+        {% trans "return home" %} &raquo;
+        </button>
+    </div>
+</div>
+{% endblock %}

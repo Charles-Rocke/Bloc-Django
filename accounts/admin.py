@@ -18,6 +18,7 @@ class CustomUserAdmin(UserAdmin):
         "company",
         "is_superuser",
         "username",
+        "pricing_plan",
     ]
 
     # base fields
@@ -59,7 +60,7 @@ class CustomUserAdmin(UserAdmin):
                     "last_name",
                     "email",
                     "company",
-                    "username"
+                    "username",
                 )
             },
         ),

@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <link rel="icon" type="image/x-icon" href="{% static 'favicon.ico' %}" />
+        <link class="favicon" rel="icon" type="image/x-icon" href="{% static 'favicon.ico' %}" />
         <!-- AUTH CSS -->
         <link rel="stylesheet" type="text/css" href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}">
         <!--===============================================================================================-->
@@ -39,6 +39,8 @@
         <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,400;1,400&amp;display=swap" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+        <!-- Pricing css -->
+        <link rel="stylesheet" href="https://cdn.lineicons.com/3.0/lineicons.css">
         <title>{% block title %}Bloc{% endblock title %}</title>
     </head>
     <body id="page-top">
@@ -53,8 +55,15 @@
                     <i class="bi-list"></i>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
+                    {% if user.is_authenticated %}
                     <ul class="navbar-nav ms-auto me-4 my-3 my-lg-0">
-                        <li class="nav-item"><a class="nav-link me-lg-3" href="#features">features</a></li>
+                        <li class="nav-item"><a class="nav-link me-lg-3" href="#Authenticated">{{ user.email }}</a></li>
+                        <a href = "{% url 'account_logout' %}">logout</a>
+                    </ul>
+                    {% else %}
+                    <ul class="navbar-nav ms-auto me-4 my-3 my-lg-0">
+                        <li class="nav-item"><a class="nav-link me-lg-3" href="/#features">features</a></li>
+                        <li class="nav-item"><a class="nav-link me-lg-3" href="{% url 'pricing' %}">pricing</a></li>
                     </ul>
                     <form action="{% url 'account_signup' %}">
                         <div class="wrap-login100-form-btn">
@@ -68,6 +77,7 @@
                             </button>
                         </div>
                     </form>
+                    {% endif %}
                 </div>
             </div>
         </nav>
@@ -119,10 +129,12 @@
         <!--===============================================================================================-->
         <script src="static/js/main.js"></script>
         <!--===============================================================================================-->
-        <!-- Foort Awesome icons-->
+        <!-- Fort Awesome icons-->
         <script src="static/js/bloc-kit.js"></script>
         <!-- MP4 JS -->
         <script src="static/js/mp4.js"></script>
+        <!-- Auth JS -->
+        <script src="static/js/webauthn/authn.js"></script>
     
     </body>
 </html>

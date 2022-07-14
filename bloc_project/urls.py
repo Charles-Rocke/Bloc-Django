@@ -22,6 +22,7 @@ urlpatterns = [
     path('9Mhs644FT8vtiwUNK39fB3tn46/', admin.site.urls),
     # User Management
     path("accounts/", include("allauth.urls")),
+     path("webauth/", include("webauth.urls")),
     path("", include("pages.urls")),
 ]
 

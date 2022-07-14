@@ -7,32 +7,29 @@
 
 @font-face {
   font-family: Poppins-Regular;
-  src: url('../fonts/poppins/Poppins-Regular.ttf'); 
+  src: url("../fonts/poppins/Poppins-Regular.731a28a413d6.ttf"); 
 }
 
 @font-face {
   font-family: Poppins-Medium;
-  src: url('../fonts/poppins/Poppins-Medium.ttf'); 
+  src: url("../fonts/poppins/Poppins-Medium.a4e11dda4053.ttf"); 
 }
 
 @font-face {
   font-family: Poppins-Bold;
-  src: url('../fonts/poppins/Poppins-Bold.ttf'); 
+  src: url("../fonts/poppins/Poppins-Bold.7940efc40d8e.ttf"); 
 }
 
 @font-face {
   font-family: Poppins-SemiBold;
-  src: url('../fonts/poppins/Poppins-SemiBold.ttf'); 
+  src: url("../fonts/poppins/Poppins-SemiBold.e63b93dfac26.ttf"); 
 }
 
 end font */
 /* bloc font */
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@300&family=Gruppo&display=swap');
 
-/* bloc favicon */
-.favicon{
-  border-radius: 50%;
-}
+
 /*//////////////////////////////////////////////////////////////////
 [ RESTYLE TAG ]*/
 /* cross-platform-img z-index */
